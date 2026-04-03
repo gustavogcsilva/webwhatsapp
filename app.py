@@ -43,7 +43,7 @@ def validar_twilio(f):
     return decorated_function
 
 @app.route("/webhook", methods=['POST'])
-@validar_twilio
+#@validar_twilio
 def webhook():
     usuario = request.values.get('From')
     mensagem = request.values.get('Body', '').strip().lower()
